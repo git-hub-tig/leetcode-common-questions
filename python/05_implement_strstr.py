@@ -34,6 +34,7 @@ class SolutionII:
             for j in range(len(needle)):
                 if haystack[i + j] != needle[j]:
                     break
+                    # wqs 
                 if j == len(needle) - 1:
                     return i
 

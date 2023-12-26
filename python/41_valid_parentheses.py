@@ -10,7 +10,7 @@ Q: Is the empty string valid? A: Yes.
 
 
 class Solution:
-
+# wqs inner class in python, match is ideal, like the rust
     class Bracket:
 
         def __init__(self, bracket_type):

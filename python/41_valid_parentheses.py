@@ -10,22 +10,21 @@ Q: Is the empty string valid? A: Yes.
 
 
 class Solution:
-# wqs inner class in python, match is ideal, like the rust
+    # wqs inner class in python, match is ideal, like the rust
     class Bracket:
-
         def __init__(self, bracket_type):
             self.bracket_type = bracket_type
 
         def match(self, char):
-            if self.bracket_type == '[' and char == ']':
+            if self.bracket_type == "[" and char == "]":
                 return True
-            if self.bracket_type == '{' and char == '}':
+            if self.bracket_type == "{" and char == "}":
                 return True
-            if self.bracket_type == '(' and char == ')':
+            if self.bracket_type == "(" and char == ")":
                 return True
             return False
 
-    def isValid(self, sequence: 'str') -> 'bool':
+    def isValid(self, sequence: "str") -> "bool":
         stack = []
         for s in sequence:
             if s in ("[", "(", "{"):

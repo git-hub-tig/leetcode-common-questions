@@ -13,24 +13,24 @@ Input: "cbbd"
 Output: "bb"
 """
 
+
 # wqs C＋＋中的函数（不只是构造函数）参数可以拥有默认值。 but can not c
 def foo(a=4):
     print("a is ")
 
+
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         if not s or len(s) == 0:
-            return ''
+            return ""
 
         n = len(s)
         dp = [[False for i in range(n)] for j in range(n)]
         for i in range(n):
             dp[i][i] = True
         ans = s[0:1]
-        
+
         for i in range(n):
-            
-            # wqs j is left than i index
             for j in range(i - 1, -1, -1):
                 # wqs the dp impact is as flag
                 # wqs the position[j][i] above the diagonal
@@ -41,7 +41,7 @@ class Solution:
                     # wqs the special case is that dp[n-1][0]
                     # wqs this the new case need to update ans
                     if i - j + 1 > len(ans):
-                        ans = s[j:i + 1]
+                        ans = s[j : i + 1]
         return ans
 
 

@@ -10,10 +10,23 @@ What is the range of the numbers?
 class Solution:
     def __init__(self):
         self.values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-        self.symbols =["M", "CM", "D", "CD", "C", "XC", "L",  "XL", "X",
-                       "IX", "V", "IV", "I"]
+        self.symbols = [
+            "M",
+            "CM",
+            "D",
+            "CD",
+            "C",
+            "XC",
+            "L",
+            "XL",
+            "X",
+            "IX",
+            "V",
+            "IV",
+            "I",
+        ]
 
-    def intToRoman(self, num: 'int') -> 'str':
+    def intToRoman(self, num: "int") -> "str":
         i = 0
         roman = []
         while num > 0:

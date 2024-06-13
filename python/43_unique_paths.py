@@ -16,9 +16,16 @@ class Solution:
             for c in reversed(range(n)):
                 mat[r][c] = mat[r + 1][c] + mat[r][c + 1]
         return mat[0][0]
-
+class Solution2:
+    def uniquePaths(self, m: 'int', n: 'int') -> 'int':
+        mat = [[0] * (n + 1) for _ in range(m + 1)]
+        mat[1][0] = 1
+        for r in range(1, m+1):
+            for c in range(1, n+1):
+                mat[r][c] = mat[r -1][c] + mat[r][c - 1]
+        return mat[m][n]
 
 if __name__ == "__main__":
-    sol = Solution()
+    sol = Solution2()
     print(sol.uniquePaths(3, 2))
     print(sol.uniquePaths(2, 2))

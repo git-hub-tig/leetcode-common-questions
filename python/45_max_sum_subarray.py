@@ -6,7 +6,6 @@ For example, given the array [2, 1, -3, 4, -1, 2, 1, -5, 4],
 The contiguous array [4, -1, 2, 1] has the largest sum = 6.
 """
 
-
 from curses.ascii import SO
 
 
@@ -29,8 +28,10 @@ res = Solution().maxSubArray(test)
 # print(f"the res is")
 print(f"{res = }")
 
+
 def err():
     raise RuntimeError("good")
+
 
 try:
     err()

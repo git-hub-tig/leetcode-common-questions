@@ -4,11 +4,12 @@ Question:
 Given a sorted integer array nums, where the range of elements are in the
 inclusive range [lower, upper], return its missing ranges. For example,
 given [0, 1, 3, 50, 75], return [“2”, “4->49”, “51->74”, “76->99”]
+
 Example Questions Candidate Might Ask:
 Q: What if the given array is empty?
 A: Then you should return [“0->99”] as those ranges are missing.
-Q: What if the given array contains all elements from the ranges? A: Return an
-empty list, which means no range is missing.
+Q: What if the given array contains all elements from the ranges? 
+A: Return an empty list, which means no range is missing.
 """
 
 
